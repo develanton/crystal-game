@@ -8,92 +8,107 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
         crossorigin="anonymous">
+    <link rel="stylesheet" href="asset/css/style.css" type="text/css">
 
 </head>
 
 <body>
 
     <div class="container">
-        <div class="jumbotron py-4 " style="text-align:center;">
+        <div class="jumbotron pt-5 pb-4 mb-3" style="text-align:center; color:#fff;">
             <div class="container">
-                <h1 class="display-4">CRYSTAL GAME</h1>
+                <h1 class="display-4">
+                    <strong>CRYSTAL GAME</strong>
+                </h1>
+                <p>
+                    <button class="btn btn-light mt-4 mb-0" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false"
+                        aria-controls="collapseExample">
+                        <strong>INSTRUCTIONS</strong>
+                    </button>
+                </p>
+                <div class="collapse" id="collapseExample">
+                    <div class="card text-white bg-dark card-body">
+                        You will be given a random number at the start of the game.
+                        <br>
+
+                        <br>There are four crystals below. By clicking on a crystal you will add a specific amount of points
+                        to your total score.
+                        <br>
+
+                        <br> You win the game by matching your total score to random number, you lose the game if your total
+                        score goes above the random number.
+                        <br>
+
+                        <br>The value of each crystal is hidden from you until you click on it.
+                        <br>
+
+                        <br> Each time when the game starts, the game will change the values of each crystal.</p>
+                    </div>
+                </div>
 
             </div>
         </div>
 
-
-
-        <div class="card text-white bg-dark lg-12 mb-3" style="max-width:100%">
-            <div class="card-header"><strong>INSTRUCTIONS</strong></div>
-            <div class="card-body">
-
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <div class="container">
+        <div class="row mb-2">
+            <div class="col-4 card border-dark px-0">
+                <div class="card-header text-center">
+                    <strong>COMPUTER'S NUMBER</strong>
+                </div>
+                <div class="card-body text-dark">
+                    <h1 class="card-title text-center px-0">40</h1>
+                </div>
             </div>
-        </div>
-
-
-
-
-        <div class="row ml-1 mb-2">
-            <div class="col-6 card border-dark pl-1 pr-0">
-                <div class="card-header text-center"><strong>COMPUTER'S NUMBER</strong></div>
+            <div class="col-4 card border-dark px-0">
+                <div class="card-header text-center">
+                    <strong> YOUR NUMBER</strong>
+                </div>
                 <div class="card-body text-dark">
                     <h1 class="card-title text-center">40</h1>
-                    </div>
+                </div>
             </div>
-
-            <div class="col-6">
-                <div class="card border-dark pb-2" style="width: 100%">
-                    <div class="card-body text-left pr-5 mr-0">
-                        <h5 class="card-title">WINS: <span>0</span></h5>
-                        <h5 class="card-title">LOSSES: <span>0</span></h5>
-                        <div class="text-right">
-                        <a href="#" class="btn btn-primary">RESTART GAME</a>
-                    </div>
+            <div class="col-4 card border-dark">
+                <div class="card-body text-left pr-5">
+                    <h3 class="card-title">WINS:
+                        <span>0</span>
+                    </h3>
+                    <h3 class="card-title">LOSSES:
+                        <span>0</span>
+                    </h3>
+                    <div class="text-right">
+                        <a href="#" class="btn btn-dark">RESTART GAME</a>
                     </div>
                 </div>
             </div>
-            </div>
+
+        </div>
+    </div>
 
 
 
-        <div class="row ml-1">
+        <div class="row mx-1">
             <div class="col-3 px-0">
-                <div class="card border-dark" style="width:100%">
+                <div class="card border-dark" style="width:100%;">
                     <img class="card-img-top" src="asset/images/blue-oj.png" alt="Card image cap" width="230px" height="200px">
-                    <div class="card-body">
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
                 </div>
             </div>
 
-            <div class="col-3">
-                <div class="card border-dark" style="width: 100%">
+            <div class="col-3 px-0">
+                <div class="card border-dark" style="width: 100%;">
                     <img class="card-img-top" src="asset/images/green-pj.png" alt="Card image cap" width="230px" height="200px">
-                    <div class="card-body">
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-3 px-0">
                 <div class="card border-dark" style="width:100%;">
                     <img class="card-img-top" src="asset/images/pueple-rj.png" alt="Card image cap" width="230px" height="200px">
-                    <div class="card-body">
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
                 </div>
             </div>
-            <div class="col-3">
-                <div class="card border-dark" style="width: 100%">
+            <div class="col-3 px-0">
+                <div class="card border-dark" style="width: 100%;">
                     <img class="card-img-top" src="asset/images/red-rj.png" alt="Card image cap" width="230px" height="200px">
-                    <div class="card-body">
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
                 </div>
             </div>
         </div>
-
-
     </div>
 
 
