@@ -4,12 +4,13 @@
 var userNum = 0;
 var wins = 0;
 var losses = 0;
+// declared globally
+var blue;
+var green;
+var red;
+var purple;
+var randomNum;
 
-var randomNum = Math.floor((Math.random() * 101) + 19);
-var blue = Math.floor((Math.random() * 11) + 1);
-var green = Math.floor((Math.random() * 11) + 1);
-var red = Math.floor((Math.random() * 11) + 1);
-var purple = Math.floor((Math.random() * 11) + 1);
 
 var greenClick = document.getElementById("green-j");
 var blueClick = document.getElementById("blue-j");
@@ -17,11 +18,24 @@ var purpleClick = document.getElementById("purple-j");
 var redClick = document.getElementById("red-j");
 var resetClick = document.getElementById("btns");
 
-var userGuess = document.getElementById("user-num").innerHTML = userNum;
+
+
+
+// FUNCTIONS
 
 
 
 function startGame() {
+    
+    // assign value local scope
+    userNum = 0;
+    var userGuess = document.getElementById("user-num").innerHTML = userNum;
+   
+    blue = Math.floor((Math.random() * 11) + 1);
+    green = Math.floor((Math.random() * 11) + 1);
+    red = Math.floor((Math.random() * 11) + 1);
+    purple = Math.floor((Math.random() * 11) + 1);
+    randomNum =  Math.floor((Math.random() * 101) + 19);
 
     randomNum;
     blue;
@@ -39,25 +53,10 @@ function startGame() {
 };
 
 
-greenClick.onclick = function () {
-    userNum = userNum + green;
-    document.getElementById("user-num").innerHTML = userNum;
-}
-blueClick.onclick = function () {
-    userNum = userNum + blue;
-    document.getElementById("user-num").innerHTML = userNum;
-}
-redClick.onclick = function () {
-    userNum = userNum + red;
-    document.getElementById("user-num").innerHTML = userNum;
-}
-purpleClick.onclick = function (){
-    userNum = userNum + purple;
-    document.getElementById("user-num").innerHTML = userNum;
-}
-
 
 function winnLose(){
+    console.log("winnlose fired!");
+// not working
 
     if(userNum == randomNum){
         alert("You win!");
@@ -73,8 +72,39 @@ function winnLose(){
     }
 }
 
-resetClick.onclick = function reseting(){
+// GAME LOGIC
 
+greenClick.onclick = function () {
+    userNum = userNum + green;
+    document.getElementById("user-num").innerHTML = userNum;
+    winnLose();
+}
+blueClick.onclick = function () {
+    userNum = userNum + blue;
+    document.getElementById("user-num").innerHTML = userNum;
+    winnLose();
+}
+redClick.onclick = function () {
+    userNum = userNum + red;
+    document.getElementById("user-num").innerHTML = userNum;
+    winnLose();
+}
+
+// purpleClick.onclick = function (){
+//     userNum = userNum + purple;
+//     document.getElementById("user-num").innerHTML = userNum;
+//     winnLose();
+// }
+
+$("#purple-j").click(function () {
+    console.log('JQUERY WORKS')
+    userNum = userNum + purple;
+    $("#user-num").html(userNum);
+})
+
+
+resetClick.onclick = function reseting(){
+// not reseting
     startGame();
     document.getElementById("wins").innerHTML = "0";
     document.getElementById("losses").innerHTML = "0";
